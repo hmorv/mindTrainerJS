@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>H&D Presents: MIND TRAINER JR.</title>
+        <link rel="stylesheet" type="text/css" href="EstilosMenuPrincipal.css" />
+        <script type="text/javascript" src="../jquery.js"></script>
+        <script type="text/javascript" src="../jquery-ui-1.10.4.custom.js"></script>
+        <script type="text/javascript" src="javaMenuPrincipal.js"></script>
+    </head>
+    <body>
+        <!--Musica de fondo y efecto.--> 
+        <audio preload="auto" id="efecto"><source src="Audio/efect.mp3" type="audio/mp3"></audio>
+        <audio id="musicaFondo" preload="auto" autoplay loop><source src="Audio/music.mp3" type="audio/mp3" /></audio>
+        
+        <div id="contenedor">                 
+            <div id="encabezado">MIND TRAINER JR.</div>                
+            <div id="simon" onmouseover="document.getElementById('efecto').play()"></div>
+            <div id="jugar">                
+                <p>CLICK TO PLAY</p>                
+            </div>
+            <div id="exit">
+            </div>                                    
+        </div>
+        <div id="footer">
+            <p>COPYRIGHT (C) 2014 HUGO & DAVID. ALL RIGHTS RESERVED.</p>
+        </div>
+    </body>
+</html>

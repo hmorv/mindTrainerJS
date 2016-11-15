@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Mind Trainer Jr.</title>
+    <script src="../jquery.color.js" type="text/javascript"></script>
+    <script src="../jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="datos.js"></script>
+    <link rel="stylesheet" href="tablero.css" type="text/css" />
+</head>
+<body>
+    <!--Estos son los audios que se reproducen al pulsar sobre cada div. Las notas son las standard: b=si, c=do etc.
+        Se han escogido las notas Si, Do, Re y Sol porque creemos que sin ellas, Guns 'N' Roses no hubiesen triunfado jamas.-->
+    <audio preload="auto" id="b"><source src="Audio/b.mp3" type="audio/mp3"></audio>
+    <audio preload="auto" id="c"><source src="Audio/c.mp3" type="audio/mp3"></audio>
+    <audio preload="auto" id="d"><source src="Audio/d.mp3" type="audio/mp3"></audio>
+    <audio preload="auto" id="g"><source src="Audio/g.mp3" type="audio/mp3"></audio>
+    <div class="contenedor">
+        <div class="fondotablero">
+            <!--La clase de estas div se compone de dos nombres, asi podemos dibujar el tablero seleccionando una parte comun a las cuatro div y luego
+            aplicando un css particular para cada uno. Esta solucion fue desarrollada tras muchas horas de meditar y no pocas blasfemias.-->            
+            <div id="forma1" class="pieza forma1" onclick="document.getElementById('b').play()"></div>
+            <div id="forma2" class="pieza forma2" onclick="document.getElementById('c').play()"></div>
+            <div id="forma3" class="pieza forma3" onclick="document.getElementById('d').play()"></div>
+            <div id="forma4" class="pieza forma4" onclick="document.getElementById('g').play()"></div>
+            <div class="circulo">
+                <!--Nivel actual-->
+                <div id="contedornivel">
+                    <p class="nivel">LEVEL</p>
+                    <p id="level" class="level">0</p>
+                </div>
+
+                <div id="botones">
+                    <!--iniciar partida-->
+                    <div id="start">
+                        <form>
+                            <button onclick="pulsarStart()" class="botonStart" type="button">START</button>
+                        </form>
+                    </div>
+                    <!-- repetir secuencia -->
+                    <div id="replay">
+                        <form name="replay">
+                            <button id="replay" onclick="pulsarReplay()" class="botonRepetir" type="button">REPLAY</button>
+                        </form>
+                    </div>
+                    <!-- volver a la pagina principal -->
+                    <div id="exit">
+                        <form action="../MenuPrincipal/MenuPrincipal.html">
+                            <input class="botonExit" type="submit" value="EXIT">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

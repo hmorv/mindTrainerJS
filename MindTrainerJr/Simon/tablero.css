@@ -1,0 +1,87 @@
+body {
+  background-color: #2fd7e8;
+  color: white;
+}
+
+.contenedor {
+  position: relative;
+  width: 640px;
+  margin: 0 auto;
+}
+
+.fondotablero {
+    position: absolute;
+    top: 25px;
+    width: 640px;
+    height: 640px;
+    z-index: 0;
+    background-color: #000;
+    border-radius: 310px;
+}
+/*Este es un selector comun a los 4 div que forman el juego.*/
+.pieza {
+  width: 300px;
+  height: 300px;
+  float: left;
+  z-index: 1;
+  margin: 10px;
+  /*Con esto podemos jugar luego para cambiar la intensidad del color*/
+  /*El comentario anterior se mantiene por razones historicas: fue el primer comentario que pusimos. No sabiamos donde nos metiamos con la opacidad...*/
+  opacity: 0.6;
+}
+/*Cada div es un recuadro de 300 px, al que aplicamos un "recorte" con border radius.
+  Aqui llamamos al segundo nombre de la clase, le damos a cada uno un color y borde.*/
+.forma1 {
+  border-top-left-radius: 300px;
+  background-color: green;
+}
+
+.forma2 {
+  float: left;
+  border-top-right-radius: 300px;
+  background-color: red;
+  clear: right;
+}
+
+.forma3 {
+  float: left;
+  border-bottom-left-radius: 300px;
+  background-color: yellow;
+  clear: left;
+}
+
+.forma4 {
+  float: left;
+  border-bottom-right-radius: 300px;
+  background-color: blue;
+}
+/*Este circulo permite cerrar la figura y dar aspecto homogeneo al tablero. En el metemos los div con el nivel y botones (mas abajo)*/
+.circulo {
+  position: absolute;
+  top: 195px;
+  left: 195px;
+  width: 250px;
+  height: 250px;
+  background: #000;
+  border-radius: 125px;
+  z-index: 10;
+  text-align:center;
+}
+
+.nivel {
+    font-size: x-large; 
+}
+
+.level {
+    font-size: x-large;
+    color: yellow;
+}
+
+.botonExit, .botonRepetir, .botonStart {
+    background-color: #b200ff;
+    border-color: #b200ff;
+    color: black;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
